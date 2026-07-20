@@ -62,7 +62,7 @@ def get_shipments_by_contact(contact_no):
                origin, destination, status, truck_no
         FROM shipment
         WHERE contact_no = %s
-    """, (contact_no,))
+    """,  (str(contact_no).strip(),))
     results = cur.fetchall()
     cur.close()
     conn.close()
