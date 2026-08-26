@@ -72,7 +72,7 @@ RULES:
 def parse_intent(user_message):
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "system", "content": get_system_prompt()},
                 {"role": "user", "content": user_message}
